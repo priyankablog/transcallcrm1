@@ -1,7 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <title>Transcall International</title>
 
@@ -46,7 +45,7 @@
             <div class="container">
                 <div class="row">
                     <div class="notice_text">
-                        <p>Thank you for calling TransCall Interpreting Services. This is Angel, ID No : #001 , I will be your SPANISH Interpreter today. How may I help you today?</p>
+                        <p>Thank you for calling TransCall Interpreting Services. This is Angel, ID No : #001 , I will be your SPANISH interpreter. How may I help you?</p>
                     </div>
                     <div class="account_information">
                         <h3>Account Information</h3>
@@ -95,27 +94,40 @@
                             </ul>
                         </div>
                     </div>
-                    <?php if(isset($custom_dc_data) && !empty($custom_dc_data)){?> 
-                        <div class="data_collection">
-                            <h3>Data Collection</h3>
+                    <div class="data_collection">
+                        <h3>Data Collection</h3>
                             <div class="account_dtails">
-                                <?php
-                                foreach ($custom_dc_data as $key) {
-                                ?>
-                                    <ul>
-                                        <li>
-                                            <span class="info_heading"><?= @$key['name'] ?></span>
-                                            <span class="info_details"><input
-                                                    type="text" placeholder="<?= @$key['description'] ?>"></span>
-                                        </li>
-                                    </ul>                                    
-                                <?php }
-                                ?>
-                            </div>
+                            <?php
+                                if(!empty($dc_data)){
+                                    foreach ($dc_data as $key) { ?>
+                                        <ul>
+                                            <li>
+                                                <span class="info_heading"><?= @$key['name'] ?></span>
+                                                <span class="info_details"><input
+                                                        type="text" ></span>
+                                            </li>
+                                        </ul>                                        
+                                    <?php }
+                                }                                
+                                if(isset($custom_dc_data) && !empty($custom_dc_data)){?> 
+                                    <?php
+                                    foreach ($custom_dc_data as $key) {
+                                    ?>
+                                        <ul>
+                                            <li>
+                                                <span class="info_heading"><?= @$key['name'] ?></span>
+                                                <span class="info_details"><input
+                                                        type="text"></span>
+                                            </li>
+                                        </ul>                                    
+                                    <?php }
+                                }
+                                if(empty($dc_data) && empty($custom_dc_data)){
+                                    echo "No Fields Found";
+                                }
+                            ?>
+                            </div>                            
                         </div>
-                    <?php
-                    }
-                    ?>
                     <div class="wrap_code">
                         <h3>Wrap Code</h3>
                         <div class="account_dtails">

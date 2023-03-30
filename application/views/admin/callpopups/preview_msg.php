@@ -40,7 +40,6 @@
                 </div>
             </div>
         </header>
-
         <!----- Page Details ----->
         <section class="hotel_details_main">
             <div class="container">

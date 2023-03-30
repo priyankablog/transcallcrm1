@@ -923,6 +923,7 @@ width: 35px}
                 <?php if(isset($custom_dc_data)){?> 
                   <h4>Your Custom Fields</h4>
                   <a href="#" data-toggle="modal" data-target="#add_custom_dc_modal" class="btn btn-primary mbot30">Add Data Collection</a>
+                  
                   <?php if (isset($client)) { ?>
                     <a href="<?= base_url('admin/preview_popup?cust_id=').$client->userid ?>"  target="__blank" class="btn btn-secondary mbot30 preview_data_collection <?= $client->data_collection != 1 ? 'hide' : '' ?>">Preview</a>
                   <?php

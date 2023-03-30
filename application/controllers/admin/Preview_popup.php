@@ -1,10 +1,5 @@
 <?php
-
-
-
 defined('BASEPATH') or exit('No direct script access allowed');
-
-
 
 class Preview_popup extends AdminController
 {
@@ -29,7 +24,10 @@ class Preview_popup extends AdminController
     
                 $this->db->select("*");
                 $data["wrap_codes"] = $this->db->get(db_prefix() . 'wrap_codes')->result_array();
-
+                $dcwhere = [
+                    'catid' => $data["clientdata"]->dc_category,
+                ];
+                $data['dc_data'] = $this->dc_master_model->get_dc('',$dcwhere);
                 $custom_dc_where = [
                     'client_id' => $id,
                 ];

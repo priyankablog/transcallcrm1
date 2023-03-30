@@ -64,7 +64,6 @@
     }, manage_customer_groups);
 
 
-
         // dc
         $("#data_collection").click(function() {
                 $(".dc_category_div").toggleClass("hide");
