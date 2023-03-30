@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+/*----- Header Details -----*/
+header.header {
+  background: #fff;
+  padding: 5px 0;
+}
+.header_logo {
+  width: 100%;
+  max-width: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+section.hotel_details_main {
+  background: #f4f4f4;
+}
+
+.notice_text {
+  background: #2e74d9;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+.notice_text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.account_information,
+.call_information,
+.data_collection,
+.wrap_code {
+  background: #2e74d9;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 0;
+}
+.account_information h3,
+.call_information h3,
+.data_collection h3,
+.wrap_code h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height:20px;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding: 10px 40px;
+}
+.account_dtails {
+  padding: 0px 40px;
+  background: #ffffff;
+  border: 1px solid #9b9b9b;
+  border-radius: 0px 0px 10px 10px;
+  vertical-align: top;
+}
+.account_dtails ul {
+  padding: 0;
+  margin: 0;
+}
+.account_dtails ul li {
+  width: 100%;
+  margin: 6px 0;
+  display: inline-flex;
+  align-items: center;
+}
+.info_heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #505050;
+  width: 40%;
+}
+.info_details {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.account_dtails .dropdown button {
+  vertical-align: top;
+  background: #2e74d9;
+  border-radius: 10px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+.data_collection .info_heading {
+  width: 200px;
+}
+.data_collection .info_details {
+  width: calc(100% - 200px);
+}
+.info_details input {
+  border: 1px solid #2e74d9;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 47px;
+  color: #000;
+  width: 100%;
+  padding: 0 15px;
+}
+.info_details input::placeholder {
+  color: #bdbdbd;
+}
+
+.submit_now {
+  margin: 20px 0;
+}
+.submit_now button {
+  background: #1bc100;
+  border-radius: 8px;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%;
+  border: none !important;
+}
+.submit_now button img {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .account_dtails {
+    padding: 20px 30px !important;
+  }
+}
+@media (max-width: 576px) {
+  .notice_text,
+  .account_information,
+  .call_information,
+  .data_collection,
+  .wrap_code {
+    width: 95%;
+    margin: 15px auto 0;
+  }
+  .notice_text p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .account_dtails {
+    padding: 20px 18px !important;
+  }
+  .account_dtails ul li {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info_heading,
+  .info_details {
+    width: 100% !important;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
